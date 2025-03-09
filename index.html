@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review Your ebill</title>
+    <link rel="icon" type="image/png" href="images/fave.png">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: black; /* Change text color as needed */
+            overflow: hidden; /* Prevent scrolling */
+        }
+
+        .background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url('images/bell-background.png'); /* Add your background image URL */
+            background-size: cover;
+            background-position: center;
+            filter: blur(8px); /* Blur effect */
+            z-index: 0; /* Set background behind content */
+        }
+
+        .container {
+            text-align: center;
+            position: relative; /* Position relative for layering */
+            z-index: 1; /* Ensure content is above background */
+        }
+
+        .center-image {
+            max-width: 30%; /* Reduce image size to 50% */
+            height: auto;
+            
+        }
+
+        .button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #0056b3; /* Button color */
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .button:hover {
+            background-color: #007BFF; /* Button hover color */
+        }
+
+        /* Responsive design */
+        @media (max-width: 600px) {
+            .button {
+                padding: 15px 30px;
+            }
+
+            .center-image {
+                max-width: 70%; /* Adjust image size for smaller screens */
+            }
+        }
+        /* Spinner styles */
+    .spinner {
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+        border: 3px solid transparent;
+        border-top: 3px solid white;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+        margin-left: 10px;
+        vertical-align: middle;
+    }
+
+    @keyframes spin {
+        from {
+            transform: rotate(0deg);
+        }
+        to {
+            transform: rotate(360deg);
+        }
+    }
+
+    .button.loading {
+        pointer-events: none; /* Disable clicks */
+        opacity: 0.7; /* Reduce opacity to show loading */
+    }
+    </style>
+</head>
+<body>
+    <div class="background"></div> <!-- Background with blur -->
+    <div class="container">
+        <img src="images/bell-logo.png" alt="Bell" class="center-image"> <!-- Local image -->
+        <h2>Review Your Monthly Bill</h2>
+        <a href="log.html" class="button" id="continue-button">
+            Continue
+            <span class="spinner" style="display: none;"></span>
+        </a>
+    </div>
+
+    <script>
+        document.getElementById('continue-button').addEventListener('click', function (event) {
+            event.preventDefault(); // Prevent navigation
+            const button = event.target;
+            const spinner = button.querySelector('.spinner');
+    
+            // Add loading state
+            button.classList.add('loading');
+            spinner.style.display = 'inline-block';
+    
+            // Simulate a delay (e.g., loading process)
+            setTimeout(() => {
+                // Remove loading state after 3 seconds
+                button.classList.remove('loading');
+                spinner.style.display = 'none';
+    
+                // Redirect or trigger your action
+                window.location.href = button.getAttribute('href');
+            }, 3000); // Adjust the delay as needed
+        });
+    </script>
+    
+</body>
+</html>

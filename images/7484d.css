@@ -1,0 +1,319 @@
+#section-2-7>.ct-section-inner-wrap {
+    max-width: 100%;
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: 75px;
+    display: flex;
+    flex-direction: row;
+    align-items: center
+}
+
+#section-2-7 {
+    display: block
+}
+
+#section-2-7 {
+    background-image: url(img_1854.jpg);
+    background-size: cover;
+    height: 90vh;
+    background-repeat: repeat;
+    background-attachment: scroll;
+    text-align: left
+}
+
+@media (max-width:1120px) {
+    #section-2-7>.ct-section-inner-wrap {
+        padding-top: 0;
+        display: flex;
+        flex-direction: row
+    }
+
+    #section-2-7 {
+        display: block
+    }
+
+    #section-2-7 {
+        text-align: center
+    }
+}
+
+@media (max-width:767px) {
+    #section-2-7>.ct-section-inner-wrap {
+        display: flex;
+        flex-direction: row;
+        align-items: center
+    }
+
+    #section-2-7 {
+        display: block
+    }
+
+    #section-2-7 {
+        text-align: center
+    }
+}
+
+@media (max-width:479px) {
+    #section-2-7>.ct-section-inner-wrap {
+        padding-top: 0;
+        padding-bottom: 0;
+        padding-left: 20px;
+        display: flex;
+        flex-direction: row;
+        align-items: center
+    }
+
+    #section-2-7 {
+        display: block
+    }
+}
+
+#div_block-3-7 {
+    width: 390px;
+    background-color: #ffffff;
+    border: 1px solid #E1E1E1;
+    border-radius: 10px
+}
+
+#div_block-4-7 {
+    width: 100%;
+    padding-right: 0px;
+    padding-left: 35px;
+    padding-top: 20px
+}
+
+#div_block-5-7 {
+    width: 100%;
+    padding-left: 35px;
+    padding-right: 35px;
+    margin-top: 30px
+}
+
+#div_block-6-7 {
+    width: 100%;
+    text-align: left;
+    align-items: center;
+    margin-top: 7px;
+    margin-bottom: 15px;
+    padding-left: 35px;
+    padding-right: 35px
+}
+
+#div_block-7-7 {
+    width: 100%;
+    margin-top: 0px;
+    background-color: #f4f4f4;
+    padding-top: 12px;
+    padding-bottom: 16px;
+    text-align: left;
+    align-items: center;
+    padding-left: 34px;
+    padding-right: 34px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px
+}
+
+@media (max-width:1120px) {
+    #div_block-3-7 {
+        width: 40%
+    }
+}
+
+@media (max-width:1120px) {
+    #div_block-4-7 {
+        padding-top: 20px
+    }
+}
+
+@media (max-width:1120px) {
+    #div_block-7-7 {
+        margin-top: 0px
+    }
+}
+
+@media (max-width:991px) {
+    #div_block-3-7 {
+        width: 50%
+    }
+}
+
+@media (max-width:767px) {
+    #div_block-3-7 {
+        width: 85%
+    }
+}
+
+@media (max-width:479px) {
+    #div_block-3-7 {
+        width: 95%;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px
+    }
+}
+
+@media (max-width:479px) {
+    #div_block-6-7 {
+        margin-bottom: 0px;
+        padding-bottom: 11px
+    }
+}
+
+@media (max-width:479px) {
+    #div_block-7-7 {
+        margin-top: 0px;
+        padding-top: 15px
+    }
+}
+
+#text_block-8-7 {
+    font-size: 30px;
+    font-weight: 600;
+    font-family: 'Poppins'
+}
+
+#text_block-9-7 {
+    margin-top: 0px;
+    text-align: center;
+    font-size: 14px
+}
+
+#text_block-10-7 {
+    text-align: center;
+    font-size: 14px;
+    color: #0154a0;
+    line-height: 1
+}
+
+#text_block-10-7:hover {
+    text-decoration: underline;
+    color: #0154a0
+}
+
+#text_block-13-7 {
+    text-align: center;
+    font-size: 13px
+}
+
+#text_block-13-7:hover {
+    text-decoration: underline
+}
+
+@media (max-width:1120px) {
+    #text_block-8-7 {
+        line-height: 1
+    }
+}
+
+@media (max-width:1120px) {
+    #text_block-9-7 {
+        margin-bottom: 0px;
+        margin-top: 0px
+    }
+}
+
+@media (max-width:479px) {
+    #text_block-8-7 {
+        font-size: 25px
+    }
+}
+
+@media (max-width:479px) {
+    #text_block-9-7 {
+        font-size: 12px;
+        margin-top: 0px;
+        line-height: 1.2
+    }
+}
+
+@media (max-width:479px) {
+    #text_block-10-7 {
+        font-size: 13px;
+        line-height: 1.2
+    }
+}
+
+@media (max-width:479px) {
+    #text_block-13-7 {
+        font-size: 12px
+    }
+}
+
+#span-15-7 {
+    font-weight: 700
+}
+
+#-form_widget-11-7 .fluentform .ff-el-input--label label {
+    font-family: 'Poppins';
+    font-size: 16px;
+    color: #000000
+}
+
+#-form_widget-11-7 .ff-el-input--label.ff-el-is-required.asterisk-right label:after,
+#-form_widget-11-7 .ff-el-input--label.ff-el-is-required.asterisk-left label:before {
+    color: #ffffff
+}
+
+#-form_widget-11-7 .ff-el-form-control {
+    box-shadow: inset 0px #5476f2;
+    border-top-color: #cecaca;
+    border-right-color: #cecaca;
+    border-bottom-color: #cecaca;
+    border-left-color: #cecaca;
+    border-top-style: solid;
+    border-right-style: solid;
+    border-bottom-style: solid;
+    border-left-style: solid;
+    border-top-width: 2.5px;
+    border-right-width: 2.5px;
+    border-bottom-width: 2.5px;
+    border-left-width: 2.5px;
+    radius_border-radius: 4px;
+    border-radius: 4px
+}
+
+#-form_widget-11-7 .ff-btn-submit {
+    color: #ffffff;
+    background-color: #003778;
+    padding-left: 35px;
+    padding-right: 35px;
+    border_radius_border-radius: 25px;
+    border-radius: 25px
+}
+
+#-form_widget-11-7 .ff-btn-submit:hover {
+    box-shadow: 0px rgba(0, 55, 120, 0.08)
+}
+
+#-form_widget-11-7 .ff-el-group input[type=checkbox]:after,
+#-form_widget-11-7 .ff-el-group input[type=radio]:after {
+    content: none
+}
+
+#-form_widget-11-7 {
+    width: 100%;
+    padding-top: 0px
+}
+
+@media (max-width:479px) {
+    #-form_widget-11-7 .fluentform .ff-el-input--label label {
+        font-size: 14px;
+        font-weight: 400
+    }
+
+    #-form_widget-11-7 .ff-btn-submit {
+        padding-left: 25px;
+        padding-right: 25px;
+        font-size: 12px
+    }
+
+    #-form_widget-11-7 .ff-el-group input[type=checkbox]:after,
+    #-form_widget-11-7 .ff-el-group input[type=radio]:after {
+        content: none
+    }
+
+    #-form_widget-11-7 {
+        padding-bottom: 0px
+    }
+}
